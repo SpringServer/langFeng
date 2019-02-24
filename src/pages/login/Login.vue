@@ -15,7 +15,8 @@
           <button class="button">登陆</button>
         </div>
         <div class="p-container">
-          <p>忘记密码?请联系管理员</p>
+          <p>忘记密码?</p>
+          <p>新用户注册</p>
         </div>
       </form>
   </div>
@@ -43,7 +44,9 @@ export default {
     right:0;
     top:0;
     bottom:0;
-    background:white;
+    background-image: url('~@/assets/static/images/login/jls.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,17 +77,19 @@ export default {
         padding: px2rem(5) px2rem(0) px2rem(5) px2rem(0);
         border:0;
         .userName{
-          border: px2rem(1) solid #444;
+          border:0;
           width:100%;
           height:100%;
+          text-indent: px2rem(5);
         }
         .passWord{
-          border: px2rem(1) solid #444;
+          border: 0;
           width:100%;
           height:100%;
+          text-indent: px2rem(5);
         }
         .button{
-          border: px2rem(1) solid #444;
+          border:0;
           width:100%;
           height:100%;
           background:#43CD80;
@@ -93,11 +98,15 @@ export default {
       }
       .p-container{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
         padding: px2rem(5) px2rem(0) px2rem(0) px2rem(0);
+        color: rgba(30, 144, 255,1);
       }
     }
+  }
+  input{
+    outline: none;
   }
   input:focus { outline: none; }
 </style>
