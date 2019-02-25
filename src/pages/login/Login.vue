@@ -60,6 +60,16 @@ export default {
     closeTab () {
       this.showError = false
     }
+  },
+  beforeMount () {
+    // 判断缓存中是否有用户
+    const data = JSON.parse(localStorage.getItem('User'))
+    // console.log(data.userName)
+    if (data) {
+      this.$router.replace('/')
+    } else {
+
+    }
   }
 }
 </script>
