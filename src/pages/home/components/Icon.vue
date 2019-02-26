@@ -9,7 +9,7 @@
                 <img class="icon-img-content" src="@/assets/static/images/login/logo.png"/>
               </div>
               <div class="icon-description">
-                <p>全部</p>
+                <p>产品分类</p>
               </div>
             </div>
             <div class="icon border">
@@ -17,7 +17,7 @@
                 <img class="icon-img-content" src="@/assets/static/images/login/logo.png"/>
               </div>
               <div class="icon-description">
-                <p>订单</p>
+                <p>产品管理</p>
               </div>
             </div>
             <div class="icon border">
@@ -25,7 +25,7 @@
                 <img class="icon-img-content" src="@/assets/static/images/login/logo.png"/>
               </div>
               <div class="icon-description">
-                <p>出单</p>
+                <p>敬请期待</p>
               </div>
             </div>
             <div class="icon border">
@@ -33,7 +33,7 @@
                 <img class="icon-img-content" src="@/assets/static/images/login/logo.png"/>
               </div>
               <div class="icon-description">
-                <p>仓库</p>
+                <p>敬请期待</p>
               </div>
             </div>
             <div class="icon border">
@@ -41,7 +41,7 @@
                 <img class="icon-img-content" src="@/assets/static/images/login/logo.png"/>
               </div>
               <div class="icon-description">
-                <p>测试</p>
+                <p>敬请期待</p>
               </div>
             </div>
           </div>
@@ -85,11 +85,8 @@ export default {
 <style scoped lang="scss">
 @import '~styles/global.scss';
 .Icon{
-  position: relative;
-  top:px2rem(82);
-  height: px2rem(200);
+  margin-top:px2rem(82);
   .slide-container {
-    height: px2rem(200);
     .container-icons{
         overflow: hidden;
         height: 0;
@@ -107,9 +104,9 @@ export default {
             left: 0;
             top: 0;
             left:0;
-            bottom: 0;
+            bottom: px2rem(5);
             box-sizing: border-box;
-            padding: px2rem(18) px2rem(18) px2rem(18) px2rem(18);
+            padding: px2rem(18) px2rem(18) px2rem(13) px2rem(18);
             .icon-img-content{
               display: block;
               width: 100%;

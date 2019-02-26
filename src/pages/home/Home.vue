@@ -1,13 +1,17 @@
 <template>
   <div>
       <home-header></home-header>
-      <home-icon></home-icon>
+      <div>
+        <home-icon></home-icon>
+        <home-common></home-common>
+      </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import HomeHeader from '@/pages/home/components/Header'
 import HomeIcon from '@/pages/home/components/Icon'
+import HomeCommon from '@/pages/home/components/Common'
 export default {
   name: 'Home',
   data () {
@@ -17,7 +21,8 @@ export default {
   },
   components: {
     HomeHeader,
-    HomeIcon
+    HomeIcon,
+    HomeCommon
   },
   beforeMount () {
     // 判断缓存中是否有用户

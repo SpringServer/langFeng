@@ -32,6 +32,7 @@ export default {
 @import '~styles/global.scss';
 .header{
   position: absolute;
+  top: 0;
   .header-container{
     position: fixed;
     z-index: 99;
