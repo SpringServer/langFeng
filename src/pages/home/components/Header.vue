@@ -2,9 +2,11 @@
   <div>
     <div class="header">
       <div class="header-container">
-        <div class="Manufactor" v-if="showHeader">
-          <p><span class="iconfont user-icon">&#xe607;</span>郎峰机械</p>
-        </div>
+        <transition name="head">
+          <div class="Manufactor" v-if="showHeader" :opacityStyle="opacityStyle">
+            <p><span class="iconfont user-icon">&#xe607;</span>郎峰</p>
+          </div>
+        </transition>
         <div class="search-container">
           <span class="iconfont search-icon">&#xe613;</span>
           <input type="text" class="header-search" placeholder="搜索您的产品">
@@ -19,11 +21,29 @@ export default {
   name: 'HomeHeader',
   data () {
     return {
-      showHeader: true
+      showHeader: true,
+      opacityStyle: {
+        opacity: 1
+      }
     }
   },
   components: {
 
+  },
+  methods: {
+    handleScroll () {
+      // console.log(document.documentElement.clientTop)
+      const top = document.documentElement.scrollTop
+      if (top && top > 100) {
+        this.showHeader = false
+      } else {
+        this.showHeader = true
+      }
+    }
+  },
+  activated () {
+    // 绑定Scroll事件,一旦执行,methods方法会触发
+    window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -32,6 +52,7 @@ export default {
 @import '~styles/global.scss';
 .header{
   position: absolute;
+  z-index: 98;
   top: 0;
   .header-container{
     position: fixed;
@@ -49,6 +70,7 @@ export default {
       font-size: px2rem(22);
       color :white;
       .user-icon{
+        padding-right: px2rem(10);
         color :black;
       }
     }
@@ -79,5 +101,23 @@ export default {
     }
   }
 }
-
+.head-enter{
+  transform: translate3d(0,-100%,0);
+  opacity: 0;
+}
+.head-enter-to{
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+.head-leave{
+  transform: translate3d(0,0,0);
+  opacity: 1;
+}
+.head-leave-to{
+  transform: translate3d(0,-100%,0);
+  opacity: 0;
+}
+.head-enter-active,.head-leave-active{
+  transition: all .5s linear;
+}
 </style>

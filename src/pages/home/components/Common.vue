@@ -6,46 +6,14 @@
         <p>——</p>
     </div>
     <div class="filter-container">
-        <div class="order border">排序</div>
-        <div class="screen border">筛选</div>
+        <div class="order border"><span class="iconfont o">&#xe66d;</span>排序</div>
+        <div class="screen border"><span class="iconfont s">&#xe630;</span>筛选</div>
     </div>
     <ul>
-        <li class="common-use border-bottom">
+        <li class="common-use border-bottom" v-for="(item,index) of this.abc" :key="index">
             <img class="common-image" src="@/assets/static/images/login/logo.png"/>
             <div class="common-content">
-                <p class="common-title">产品名</p>
-                <p class="common-description">产品描述</p>
-                <p class="common-price">单价</p>
-            </div>
-        </li>
-        <li class="common-use border-bottom">
-            <img class="common-image" src="@/assets/static/images/login/logo.png"/>
-            <div class="common-content">
-                <p class="common-title">产品名</p>
-                <p class="common-description">产品描述</p>
-                <p class="common-price">单价</p>
-            </div>
-        </li>
-        <li class="common-use border-bottom">
-            <img class="common-image" src="@/assets/static/images/login/logo.png"/>
-            <div class="common-content">
-                <p class="common-title">产品名</p>
-                <p class="common-description">产品描述</p>
-                <p class="common-price">单价</p>
-            </div>
-        </li>
-        <li class="common-use border-bottom">
-            <img class="common-image" src="@/assets/static/images/login/logo.png"/>
-            <div class="common-content">
-                <p class="common-title">产品名</p>
-                <p class="common-description">产品描述</p>
-                <p class="common-price">单价</p>
-            </div>
-        </li>
-        <li class="common-use border-bottom">
-            <img class="common-image" src="@/assets/static/images/login/logo.png"/>
-            <div class="common-content">
-                <p class="common-title">产品名</p>
+                <p class="common-title">产品名{{item.title}}</p>
                 <p class="common-description">产品描述</p>
                 <p class="common-price">单价</p>
             </div>
@@ -56,6 +24,11 @@
 <script type="text/ecmascript-6">
 export default {
   name: 'homeCommon',
+  props: {
+    abc: Array
+  },
+  methods: {
+  },
   data () {
     return {
 
@@ -63,6 +36,8 @@ export default {
   },
   components: {
 
+  },
+  mounted () {
   }
 }
 </script>
@@ -95,21 +70,31 @@ export default {
     align-items: center;
     .order{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
         width: 50%;
         height: 100%;
         text-align: center;
         font-size: px2rem(16);
+        .o{
+            padding-right:px2rem(5);
+            font-size: px2rem(14);
+        }
     }
     .screen{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
         width: 50%;
         height: 100%;
         text-align: center;
         font-size: px2rem(16);
+        .s{
+            padding-right:px2rem(5);
+            font-size: px2rem(14);
+        }
     }
 }
 .common-use{
