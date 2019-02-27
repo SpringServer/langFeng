@@ -1,10 +1,11 @@
 <template>
   <div>
-      search page 1231321
+    <search-header></search-header>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import SearchHeader from '@/pages/search/components/Header.vue'
 export default {
   name: 'Search',
   data () {
@@ -13,7 +14,7 @@ export default {
     }
   },
   components: {
-
+    SearchHeader
   }
 }
 </script>

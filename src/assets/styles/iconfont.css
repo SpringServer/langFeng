@@ -1,9 +1,9 @@
 @font-face {font-family: "iconfont";
-  src: url('./iconfont/iconfont.eot?t=1551247189957'); /* IE9 */
-  src: url('./iconfont/iconfont.eot?t=1551247189957#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('./iconfont/iconfont.woff?t=1551247189957') format('woff'),
-  url('./iconfont/iconfont.ttf?t=1551247189957') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-  url('./iconfont/iconfont.svg?t=1551247189957#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('./iconfont/iconfont.eot?t=1551274084795'); /* IE9 */
+  src: url('./iconfont/iconfont.eot?t=1551274084795#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./iconfont/iconfont.woff?t=1551274084795') format('woff'),
+  url('./iconfont/iconfont.ttf?t=1551274084795') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('./iconfont/iconfont.svg?t=1551274084795#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -40,6 +40,10 @@
 
 .iconjiantouxia:before {
   content: "\e62d";
+}
+
+.iconfanhui:before {
+  content: "\e611";
 }
 
 .iconpaixu:before {
